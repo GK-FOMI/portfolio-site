@@ -1,0 +1,27 @@
+---
+const { title } = Astro.props;
+---
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>{title} | Gabriel Cinéma</title>
+    <style is:global>
+      body { background: #050505; color: white; font-family: 'Inter', sans-serif; margin: 0; }
+      nav { padding: 20px; display: flex; justify-content: center; gap: 30px; background: rgba(0,0,0,0.8); position: sticky; top: 0; z-index: 100; }
+      nav a { color: #94a3b8; text-decoration: none; font-weight: 500; transition: 0.3s; }
+      nav a:hover { color: #38bdf8; }
+      .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
+      h1 { font-family: 'Playfair Display', serif; font-size: 3rem; }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="/">Accueil</a>
+      <a href="/projets">Projets</a>
+      <a href="/cv">CV</a>
+      <a href="/contact">Contact</a>
+    </nav>
+    <main class="container">
+      <slot /> </main>
+  </body>
+</html>
