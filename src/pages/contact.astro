@@ -1,0 +1,49 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+<MainLayout title="Contact">
+  <section class="container" style="padding: 60px 20px;">
+    <h1 style="margin-bottom: 10px;">Me Contacter</h1>
+    <p style="color: #888; margin-bottom: 50px; font-size: 1.1rem;">
+      Un projet de court-métrage, une collaboration ou juste une question ? N'hésite pas à m'envoyer un message.
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px;">
+      
+      <div>
+        <h3 style="color: #38bdf8; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px;">Coordonnées</h3>
+        <p style="margin: 20px 0;">
+          <strong>Email :</strong><br />
+          <a href="mailto:ton-email@exemple.com" style="color: #ccc; text-decoration: none;">ton-email@exemple.com</a>
+        </p>
+        
+        <h3 style="color: #38bdf8; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; margin-top: 40px;">Réseaux</h3>
+        <ul style="list-style: none; padding: 0; margin-top: 20px;">
+          <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">Instagram — @TonInsta</a></li>
+          <li style="margin-bottom: 10px;"><a href="#" style="color: #ccc; text-decoration: none;">LinkedIn — Ton Profil</a></li>
+          <li><a href="#" style="color: #ccc; text-decoration: none;">Vimeo — Tes Travaux</a></li>
+        </ul>
+      </div>
+
+      <form action="https://formspree.io/f/TON_ID_FORMSPREE" method="POST" style="display: flex; flex-direction: column; gap: 20px;">
+        <div>
+          <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: #666;">Nom complet</label>
+          <input type="text" name="name" required style="width: 100%; padding: 12px; background: #111; border: 1px solid #222; color: white; border-radius: 4px;" />
+        </div>
+
+        <div>
+          <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: #666;">Email</label>
+          <input type="email" name="_replyto" required style="width: 100%; padding: 12px; background: #111; border: 1px solid #222; color: white; border-radius: 4px;" />
+        </div>
+
+        <div>
+          <label style="display: block; margin-bottom: 8px; font-size: 0.9rem; color: #666;">Message</label>
+          <textarea name="message" rows="6" required style="width: 100%; padding: 12px; background: #111; border: 1px solid #222; color: white; border-radius: 4px; resize: vertical;"></textarea>
+        </div>
+
+        <button type="submit" class="btn-primary" style="border: none; cursor: pointer; width: fit-content;">ENVOYER LE MESSAGE</button>
+      </form>
+
+    </div>
+  </section>
+</MainLayout>
