@@ -1,0 +1,51 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+<MainLayout title="Mon Parcours">
+  <section class="container" style="padding: 60px 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px;">
+      <h1>Mon Parcours</h1>
+      <a href="/mon-cv-cinema.pdf" download class="btn-primary">TÉLÉCHARGER LE CV (PDF)</a>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px;">
+      <aside>
+        <h3 style="color: #38bdf8; text-transform: uppercase; font-size: 0.9rem;">Logiciels & Outils</h3>
+        <ul style="list-style: none; padding: 0; color: #ccc;">
+          <li>Adobe Premiere Pro</li>
+          <li>DaVinci Resolve (Étalonnage)</li>
+          <li>After Effects</li>
+          <li>Final Cut Pro</li>
+        </ul>
+
+        <h3 style="color: #38bdf8; text-transform: uppercase; font-size: 0.9rem; margin-top: 30px;">Compétences Terrain</h3>
+        <ul style="list-style: none; padding: 0; color: #ccc;">
+          <li>Gestion d'équipe (Tournage)</li>
+          <li>Prise de vue (Sony/Blackmagic)</li>
+          <li>Éclairage Studio & Extérieur</li>
+        </ul>
+      </aside>
+
+      <div>
+        <h2 style="border-bottom: 1px solid #222; padding-bottom: 10px;">Expériences</h2>
+        <div style="margin: 20px 0;">
+          <h4 style="margin: 0;">Assistant Caméra — "Nom du Court-Métrage"</h4>
+          <span style="color: #666; font-size: 0.9rem;">Janvier 2026 — 2 semaines</span>
+          <p style="color: #aaa;">Gestion des optiques et mise au point sur un tournage en extérieur nuit.</p>
+        </div>
+
+        <div style="margin: 20px 0;">
+          <h4 style="margin: 0;">Monteur — Clip Musical "Artiste"</h4>
+          <span style="color: #666; font-size: 0.9rem;">Décembre 2025</span>
+          <p style="color: #aaa;">Montage rythmé et étalonnage sous DaVinci Resolve.</p>
+        </div>
+
+        <h2 style="border-bottom: 1px solid #222; padding-bottom: 10px; margin-top: 50px;">Formation</h2>
+        <div style="margin: 20px 0;">
+          <h4 style="margin: 0;">Licence Cinéma et Audiovisuel</h4>
+          <span style="color: #666; font-size: 0.9rem;">En cours — Université Nom</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</MainLayout>
