@@ -6,32 +6,37 @@ import MainLayout from '../layouts/MainLayout.astro';
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 50px;">
       <div>
         <h1>Mon Parcours</h1>
-        <p style="color: #38bdf8; font-weight: bold;">{new Date().getFullYear() - 2025 + 1}ère année — Bachelor en Réalisation Cinématographique</p>
+        <p style="color: #38bdf8; font-weight: bold;">{new Date().getFullYear() - 2025 }ère année — Bachelor en Réalisation Cinématographique</p>
       </div>
-      <a href="/mon-cv-cinema.pdf" download class="btn-primary">TÉLÉCHARGER LE CV (PDF)</a>
+      <a href="/mon-cv-cinema.pdf" download class="btn-primary">TÉLÉCHARGER LE CV (PDF) </a>
     </div>
 
     <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 60px;">
       
       <aside>
+        <div style="width: 100%; aspect-ratio: 1/1; background: #111; border: 1px solid #222; margin-bottom: 30px; overflow: hidden;">
+           <img src="/photo-cv.jpg" alt="Panel Nbeuka" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;" />
+        </div>
+
         <h3 style="color: #38bdf8; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Expertise Technique</h3>
         <ul style="list-style: none; padding: 0; color: #ccc; margin-bottom: 40px;">
-          <li style="margin-bottom: 8px;">• Adobe Premiere Pro</li>
-          <li style="margin-bottom: 8px;">• CapCut (Expertise Social Media)</li>
-          <li style="margin-bottom: 8px;">• Prise de vue & Cadrage</li>
-          <li style="margin-bottom: 8px;">• Gestion de la lumière</li>
-          <li style="margin-bottom: 8px;">• Communication Digitale</li>
+          <li style="margin-bottom: 8px;">• Réalisation et montage audiovisuel</li>
+          <li style="margin-bottom: 8px;">• Écriture et conception (Fiction/Docu)</li>
+          <li style="margin-bottom: 8px;">• Prise de vue: cadre, lumière, compo</li>
+          <li style="margin-bottom: 8px;">• Adobe Premiere Pro & CapCut</li>
+          <li style="margin-bottom: 8px;">• Adaptation formats (YT, TikTok, IG)</li>
+          <li style="margin-bottom: 8px;">• Gestion d'image et cohérence visuelle</li>
         </ul>
 
         <h3 style="color: #38bdf8; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Langues</h3>
         <ul style="list-style: none; padding: 0; color: #ccc; margin-bottom: 40px;">
-          <li>Français : Maternel</li>
+          <li>Français : Maternelle</li>
           <li>Anglais : Intermédiaire</li>
         </ul>
 
         <h3 style="color: #38bdf8; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px;">Profil</h3>
-        <p style="color: #888; font-size: 0.9rem;">
-          Créatif et méthodique, je développe des projets audiovisuels avec une approche à la fois artistique et sociale.
+        <p style="color: #888; font-size: 0.9rem; line-height: 1.6;">
+          Créatif et méthodique, je développe des projets avec une approche artistique et sociale. À l'aise en équipe, je mets mes compétences au service de la communication digitale.
         </p>
       </aside>
 
@@ -42,7 +47,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           <h4 style="margin: 0; font-size: 1.2rem;">Responsable de Communication & Montage Vidéo</h4>
           <span style="color: #38bdf8;">PXL Agency | 10/2023 — 01/2025</span>
           <p style="color: #aaa; margin-top: 10px;">
-            Création et montage de contenus vidéo pour les réseaux sociaux. Gestion de l'image et participation à la stratégie de diffusion digitale.
+            Création et montage de contenus vidéo pour les réseaux sociaux. Gestion intégrale de l'image, de la communication digitale et participation active à la stratégie de contenu et de diffusion.
           </p>
         </div>
 
@@ -50,7 +55,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           <h4 style="margin: 0; font-size: 1.2rem;">Cadreur</h4>
           <span style="color: #38bdf8;">Sky Production | 06/2021 — 08/2023</span>
           <p style="color: #aaa; margin-top: 10px;">
-            Cadrage et captation vidéo pour des clips d'artistes locaux. Travail approfondi sur la composition et le mouvement de la caméra.
+            Cadrage et captation vidéo pour clips d'artistes locaux. Travail approfondi sur la composition de l'image, le choix des cadres et la fluidité des mouvements de caméra.
           </p>
         </div>
 
@@ -58,17 +63,18 @@ import MainLayout from '../layouts/MainLayout.astro';
         
         <div style="margin-bottom: 30px;">
           <h4 style="margin: 0;">Bachelor en Réalisation Cinématographique (Niveau 1)</h4>
-          <span style="color: #666;">CLCF-PARIS | En cours (2025 — 2027)</span> 
+          <span style="color: #666;">CLCF-PARIS | En cours (2025 — 2027)</span>
         </div>
 
-        <div>
+        <div style="margin-bottom: 30px;">
           <h4 style="margin: 0;">Baccalauréat Scientifique</h4>
           <span style="color: #666;">Lycée classique de Bafang | 2020</span>
         </div>
 
         <div style="margin-top: 60px; padding: 30px; background: #111; border: 1px solid #222;">
           <h3 style="margin-top: 0;">Projet Phare</h3>
-          <p><strong>"Tchad Lazawa"</strong> — Long-métrage indépendant explorant l'influence des réseaux sociaux avec une approche artistique. </p>
+          <p style="margin-bottom: 10px;"><strong>"Tchad Lazawa"</strong> — Long-métrage indépendant.</p>
+          <p style="color: #888; font-size: 0.95rem;">Exploration thématique des réseaux sociaux et des influenceurs, traitée avec une double approche artistique et sociale.</p>
         </div>
       </div>
       

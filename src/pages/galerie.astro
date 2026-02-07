@@ -1,0 +1,91 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { sanityClient } from "sanity:client";
+import createImageUrlBuilder from '@sanity/image-url';
+
+const builder = createImageUrlBuilder(sanityClient);
+const urlFor = (source: any) => builder.image(source);
+
+// 1. On définit l'interface pour supprimer l'erreur TypeScript
+interface PhotoGallery {
+  titre: string;
+  image: any;
+  legende: string;
+}
+
+// 2. On précise le type <PhotoGallery[]> dans le fetch
+const photos = await sanityClient.fetch<PhotoGallery[]>(
+  `*[_type == "galerie"]{titre, image, legende}`
+);
+---
+
+<MainLayout title="Galerie & Coulisses">
+  <section class="container" style="padding: 60px 20px;">
+    <h1>Coulisses & Tournages</h1>
+    <p style="color: #888; margin-bottom: 40px;">
+      Aperçu de mon travail sur le terrain : de la préparation au montage final. 
+    </p>
+
+    <div class="gallery-grid">
+      {photos.map((photo) => (
+        <div class="gallery-item">
+          <a href={urlFor(photo.image).url()} target="_blank">
+            <img 
+              src={urlFor(photo.image).width(600).url()} 
+              alt={photo.titre} 
+              class="gallery-img"
+            />
+            <div class="gallery-info">
+              <span class="gallery-caption">{photo.legende}</span>
+            </div>
+          </a>
+        </div>
+      ))}
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    background: #111;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-item:hover {
+    transform: scale(1.02);
+  }
+
+  .gallery-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(40%) contrast(1.1);
+    transition: 0.3s;
+  }
+
+  .gallery-item:hover .gallery-img {
+    filter: grayscale(0%) contrast(1);
+  }
+
+  .gallery-info {
+    padding: 15px;
+    background: #0a0a0a;
+  }
+
+  .gallery-caption {
+    font-size: 0.8rem;
+    color: #38bdf8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+</style>
